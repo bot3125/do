@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Agregamos un ScrollView para pantallas pequeñas -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tvDolarHoy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona una moneda"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvAlertaPrincipal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toca 'Dólar Actual' o 'Worldcoin Actual'"
+            android:textColor="#333333"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_marginBottom="16dp"
+            android:gravity="center" />
+
+        <!-- 2 BOTONES DE CONSULTA DE PRECIO EN VIVO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnPrecioDolar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="💵 Dólar Actual"
+                android:backgroundTint="#2E7D32"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btnPrecioWld"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🌐 Worldcoin Actual"
+                android:backgroundTint="#6A1B9A"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+        <!-- Tarjetas de Evaluación -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvVentana5A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="• Últimos 5 años: ❌ NO"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvVentana3A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="• Últimos 3 años: ❌ NO"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvVentana1A"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="• Último 1 año:   ❌ NO"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvVentana30D"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="• Últimos 30 días: ❌ NO"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Botones de Evaluación Específica -->
+        <Button
+            android:id="@+id/btnCompraDolar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Evaluar Compra Dólar (S/)"
+            android:backgroundTint="#388E3C"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnVentaDolar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Evaluar Venta Dólar (S/)"
+            android:backgroundTint="#1565C0"
+            android:layout_marginTop="6dp" />
+
+        <Button
+            android:id="@+id/btnVentaWld"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Evaluar Venta Worldcoin (WLD)"
+            android:backgroundTint="#8E24AA"
+            android:layout_marginTop="6dp" />
+
+    </LinearLayout>
+</ScrollView>
